@@ -17,7 +17,7 @@ public class PlayingState : State
 
     public override void EnterState()
     {
-        
+
         base.EnterState();
     }
 

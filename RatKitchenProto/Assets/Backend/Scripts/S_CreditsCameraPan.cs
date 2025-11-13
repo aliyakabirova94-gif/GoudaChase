@@ -1,29 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 public class S_CreditsCameraPan : MonoBehaviour
 {
     [Header("Dependencies")]
     public GameObject MenuCanvas;
-    [Header("Camera Pan Settings")] 
-    public Quaternion StartRotation;
-    public Quaternion EndRotation;
+    public GameObject returnButton;
+    [Header("Camera Pan Settings")]
+
+    public GameObject CameraPanTarget;
+    public GameObject mainCamera;
     public float PanDuration;
     public float PanSpeed;
-    
+
+
+
     public void StartCameraPan()
     {
-        StartRotation = transform.rotation;
-        transform.rotation = Quaternion.Lerp(StartRotation, EndRotation, PanSpeed * Time.deltaTime / PanDuration);
         MenuCanvas.SetActive(false);
+        mainCamera.SetActive(false);
+        CameraPanTarget.SetActive(true);
+        returnButton.SetActive(true);
     }
 
     public void ReturnCameraPan()
     {
-        transform.rotation = Quaternion.Lerp(EndRotation, StartRotation, PanSpeed * Time.deltaTime / PanDuration);
+        mainCamera.SetActive(true);
         MenuCanvas.SetActive(true);
+        CameraPanTarget.SetActive(false);
+        returnButton.SetActive(false);
     }
 }

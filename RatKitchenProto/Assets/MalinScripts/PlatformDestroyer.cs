@@ -45,16 +45,16 @@ public class PlatformDestroyer : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (DifficultyManager.Instance != null) 
+        if (DifficultyManager.Instance != null)
             DifficultyManager.Instance.OnLevelReset -= ReturnToPoolOnReset;
     }
 
     private void ReturnToPool()
     {
-        if (pooledPlatform != null) 
+        if (pooledPlatform != null)
             KitchenPool.Instance.ReturnToPool(pooledPlatform.platformType, gameObject);
 
-        if (pooledWall != null) 
+        if (pooledWall != null)
             KitchenPool.Instance.ReturnWallToPool(pooledWall.wallType, gameObject);
     }
 

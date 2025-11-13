@@ -9,9 +9,9 @@ public class GameManager : StateMachine
         if (Instance == null)
         {
             Instance = this;
-            
+
         }
-        
+
     }
 
     #endregion

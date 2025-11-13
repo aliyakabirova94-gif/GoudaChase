@@ -149,7 +149,7 @@ public class KitchenPool : MonoBehaviour
 
         obj.SetActive(false);
         if (!platformDictionary[type].Contains(obj))
-        platformDictionary[type].Enqueue(obj);
+            platformDictionary[type].Enqueue(obj);
     }
 
     /* WALL POOL*/

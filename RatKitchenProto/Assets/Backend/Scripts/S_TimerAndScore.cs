@@ -28,7 +28,7 @@ public class S_TimerAndScore : MonoBehaviour
 
     public void UpdateScore(int score)
     {
-        
+
         ScoreText.text = score.ToString();
 
     }

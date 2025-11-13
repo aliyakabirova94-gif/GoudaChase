@@ -7,14 +7,14 @@ public class DifficultyManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private KitchenGenerator kitchenGenerator;
-    [FormerlySerializedAs("camera")] [SerializeField] private CameraScript newCamera;
+    [FormerlySerializedAs("camera")][SerializeField] private CameraScript newCamera;
     [SerializeField] private PlayerMovement player;
     [SerializeField] private S_TimerAndScore score;
 
     [SerializeField] private PlatformType sinkPlatform; // not needed?
     [SerializeField] private PlatformType ovenPlatform;// not needed?
 
-    [Header("Current Level")] 
+    [Header("Current Level")]
     [SerializeField] private int currentLevel = 1;
     //[SerializeField] private LevelSettings currentSettings; // manual override of level settings
     [SerializeField] private int basePlatformCount = 20;
@@ -78,7 +78,7 @@ public class DifficultyManager : MonoBehaviour
     public void LevelComplete()
     {
         currentLevel++;
-        
+
         CurrentMaxPlatforms += platformsPerLevelIncrease;
 
         score.UpdateScore(currentLevel);
@@ -86,14 +86,14 @@ public class DifficultyManager : MonoBehaviour
         if (newCamera.moveSpeed < maxSpeed)
         {
             newCamera.moveSpeed *= cameraSpeedMultiplier;
-            
+
             if (newCamera.moveSpeed > maxSpeed)
             {
                 newCamera.moveSpeed = maxSpeed;
             }
             player.ChangeSpeed();
         }
-        
+
 
 
         Debug.Log("Level" + currentLevel + "started, max platforms are now" + CurrentMaxPlatforms);

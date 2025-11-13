@@ -74,9 +74,14 @@ public class S_OptionsMenu : MonoBehaviour
         // Quality
         var savedQuality = PlayerPrefs.GetInt("Quality", QualitySettings.GetQualityLevel());
         QualityDropdown.SetValueWithoutNotify(savedQuality);
+
         //  VSync  
-        var savedVSync = PlayerPrefs.GetInt("VSync", QualitySettings.vSyncCount > 0 ? 1 : 0);
+        var savedVSync = PlayerPrefs.GetInt("VSync", 1); // Default to 1 (On)
         VSyncToggle.SetIsOnWithoutNotify(savedVSync == 1);
+
+        // --- THIS IS THE NEW LINE YOU MUST ADD ---
+        // This line applies the saved setting to the actual game engine
+        QualitySettings.vSyncCount = savedVSync;
     }
 
     public void SetDisplayMode(int i)
@@ -105,6 +110,11 @@ public class S_OptionsMenu : MonoBehaviour
     public void SetQuality(int i)
     {
         QualitySettings.SetQualityLevel(i);
+
+        // --- THIS IS THE NEW LINE YOU MUST ADD ---
+        // This re-applies VSync, because SetQualityLevel resets it
+        QualitySettings.vSyncCount = PlayerPrefs.GetInt("VSync", 1);
+
         PlayerPrefs.SetInt("Quality", i);
         PlayerPrefs.Save();
     }

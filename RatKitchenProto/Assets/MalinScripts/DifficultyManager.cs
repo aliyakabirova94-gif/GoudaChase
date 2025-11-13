@@ -8,7 +8,8 @@ public class DifficultyManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private KitchenGenerator kitchenGenerator;
     [FormerlySerializedAs("camera")] [SerializeField] private CameraScript newCamera;
-    [SerializeField] private PlayerMovement player; 
+    [SerializeField] private PlayerMovement player;
+    [SerializeField] private S_TimerAndScore score;
 
     [SerializeField] private PlatformType sinkPlatform; // not needed?
     [SerializeField] private PlatformType ovenPlatform;// not needed?
@@ -79,6 +80,8 @@ public class DifficultyManager : MonoBehaviour
         currentLevel++;
         
         CurrentMaxPlatforms += platformsPerLevelIncrease;
+
+        score.UpdateScore(currentLevel);
 
         if (newCamera.moveSpeed < maxSpeed)
         {

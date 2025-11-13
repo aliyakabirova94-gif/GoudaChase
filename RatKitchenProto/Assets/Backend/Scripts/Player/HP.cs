@@ -9,6 +9,12 @@ public class HP : MonoBehaviour
     private int health = 2;
     private float timer;
 
+    Animator animator;
+
+    private void Start()
+    {
+        if (animator == null) animator = FindAnyObjectByType<Animator>();
+    }
 
     private void Update()
     {
@@ -32,6 +38,7 @@ public class HP : MonoBehaviour
 
         if (health <= 0)
         {
+            if (animator != null) animator.SetTrigger("RatDead");
             SceneManager.LoadScene("Main Menu");
 
             Debug.Log("Game Over");

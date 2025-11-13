@@ -74,10 +74,7 @@ public class S_LevelManager : MonoBehaviour
         }
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+    
 }
 
 

@@ -87,8 +87,6 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 6272190269036308571}
   - {fileID: 1995161337906597751}
-  - {fileID: 6003592420714961365}
-  - {fileID: 5011379391275612564}
   possibleObstacles:
   - {fileID: 5190441673226054599, guid: ab20d002c2616324fa6fc5d4c9f7c2f9, type: 3}
   - {fileID: 392448708252072709, guid: 7610db33ec3c6e44ba6b09ed8c459508, type: 3}
@@ -140,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6003592420714961365
 Transform:
   m_ObjectHideFlags: 0
@@ -181,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 1965815719823400798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.156, y: 1.076, z: -0.097}
+  m_LocalPosition: {x: -0.398, y: 1.076, z: -0.097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -202,7 +200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5011379391275612564
 Transform:
   m_ObjectHideFlags: 0
@@ -278,7 +276,7 @@ Transform:
   m_GameObject: {fileID: 5883552897461430389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.156, y: 1.076, z: -0.405}
+  m_LocalPosition: {x: -0.39800006, y: 1.076, z: -0.40499997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

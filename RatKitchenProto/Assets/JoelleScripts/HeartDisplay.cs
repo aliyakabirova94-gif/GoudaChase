@@ -17,9 +17,9 @@ public class HeartDisplay : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            
+
         }
-        
+
     }
 
 
@@ -52,23 +52,26 @@ public class HeartDisplay : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-            
+
             GameManager.Instance.SwitchState<DeathState>();
 
             //---G/O---
-            if (gameOverUI != null)
-                gameOverUI.SetActive(true);
-            
+
+            gameOverUI.SetActive(true);
+            Animator playerAnimator = gameObject.GetComponentInChildren<Animator>();
+
+            playerAnimator.speed = 0f;
+
             //Destroy player
             //GameObject player = GameObject.FindGameObjectWithTag("Player");
             //if(player !=null)
             //    Destroy(player);
-                
+
             //Debug.Log("Player died, game over");
             /*Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name); */
             // player.transform.position = respawnPoint.position;
         }
-        
+
     }
 }

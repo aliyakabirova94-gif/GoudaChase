@@ -23,7 +23,7 @@ public class PlayerChangeLane : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
-    private void Update()
+    public void UpdateLaneChange()
     {
         PlayerChangeLine();
 

@@ -6,11 +6,13 @@ public class PlayingState : State
     [SerializeField] private KitchenGenerator KitchenGenerator;
     private CameraScript cameraScript;
     private PlayerMovement playerMovement;
+    private PlayerChangeLane playerChangeLane;
 
     private void Awake()
     {
         cameraScript = FindFirstObjectByType<CameraScript>();
         playerMovement = FindFirstObjectByType<PlayerMovement>();
+        playerChangeLane = FindFirstObjectByType<PlayerChangeLane>();
     }
 
     public override void EnterState()
@@ -28,6 +30,7 @@ public class PlayingState : State
     {
         base.UpdateState();
 
+        playerChangeLane.UpdateLaneChange();
         cameraScript.UpdateCamera();
         playerMovement.PlayerUpdate();
         TimerAndScore.UpdateTimer();

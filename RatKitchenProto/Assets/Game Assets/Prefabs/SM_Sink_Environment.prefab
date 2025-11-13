@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8088230246953161554}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpawnPoint_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3630420498261927250}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpawnPoint_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 450608370005054724}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpawnPoint_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1220035487510567782}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpawnPoint_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,9 +172,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1009983721277916039, guid: 585c8fc3a5162fb498ee3247bb569879, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 585c8fc3a5162fb498ee3247bb569879, type: 3}
       propertyPath: m_Name
       value: SM_Sink_Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 585c8fc3a5162fb498ee3247bb569879, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714458535024757942, guid: 585c8fc3a5162fb498ee3247bb569879, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813025541751855568, guid: 585c8fc3a5162fb498ee3247bb569879, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -222,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlatformDestroyer
   platformDestructionPoint: {fileID: 0}
+  wallDestructionPoint: {fileID: 0}
 --- !u!114 &422869313213963673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,3 +261,6 @@ MonoBehaviour:
   minObstacles: 1
   maxObstacles: 2
   needsObstacleAtStart: 1
+  needsObstacleAtEnd: 1
+  needsOnlyOneObstacle: 0
+  spawnedObstacles: []

@@ -9,12 +9,9 @@ public class GameManager : StateMachine
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
     #endregion

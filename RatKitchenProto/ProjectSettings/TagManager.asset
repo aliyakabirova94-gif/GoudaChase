@@ -12,6 +12,8 @@ TagManager:
   - Destination
   - Pots&Pans
   - SceneFader
+  - Obstacle
+  - Camera2
   layers:
   - Default
   - TransparentFX
